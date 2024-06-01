@@ -5,8 +5,6 @@
 
 # 3) NanoEdge AI Studio ile Edge-AI Çözümleri Geliştirme
 
-Empa Electronics'in ilk Üniversite Workshop etkinliğine, Yıldız Teknik Üniversitesi Workshop'una hoş geldiniz!
-
 Bu el kitabı, NanoEdge AI Studio kullanarak İnsan Aktivitesi Tanıma uygulamamızın geliştirme adımlarını uygulamanız için size rehberlik edecek.
 <br>
 

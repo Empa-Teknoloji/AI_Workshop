@@ -4,13 +4,19 @@
 </p>
 
 \
-**Bu sayfada, NanoEdge AI Studio ile bir AI modeli geliştirmenin genel adımlarını inceleyeceğiz.**
+**Bu sayfada, NanoEdge AI Studio ile bir AI modeli geliştirmenin tüm adımlarını inceleyeceğiz.**
 
 ## 1. Ön İşleme Süreçleri
 
 NanoEdge AI Studio esas olarak **sensör** uygulamaları için yapılmıştır ve sensör uygulamaları **zaman serisi** verilerinden oluşur. Bu nedenle, kullanıcıların bu uygulamalar için uygun giriş verilerini kullanmaları gerekir, böylece modeller doğru bir şekilde oluşturulabilir.
 
+Uygun giriş verileri, toplanan verinin yapılmak istenen uygulamanın özelliklerine uygun olacak bir sampling size seçilerek gruplanması anlamına gelmektedir. 
+
 ![Untitled](./Additionals/NEAIS-Preprocesses/Untitled0.png)
+
+**İnsan Aktivitesi Tanıma** uygulaması için, yapılacak el hareketlerinin 1 saniye içinde gerçekleştiği düşünülmüş ve modele verilecek bir satırlık verinin sensörlerle toplanılmasında da bu süre dikkate alınarak:
+- Her bir ölçüm arasına 8 ms gecikme konulmuştur.
+- 128 adet ölçüm gruplandığında, modele verilecek her örneğin 128 * 8 = 1024 ms'lik bir zaman aralığını kapsayacağı ve bu aralığın istenen uygulama için yeterli olduğu düşünülmüştür. 
 
 ### 1.1. **Data Logger (DL)**
 
@@ -85,13 +91,22 @@ NanoEdge AI Studio esas olarak **sensör** uygulamaları için yapılmıştır v
 
 ## 3. Uçtan Uca Geliştirme Adımları
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled0.png)
+Seçilen uygulamada **5 adet hareket verisi sınıflandırılmak** ve **modelden bu sınıfları isim isim tahmin etmesi beklenmektedir**. Bu isteğe uygun NanoEdge AI Studio uygulaması **n-Class Classification**'dır.
+
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled0.jpg)
 
 NanoEdge AI Studio, sürecin hemen her kısmı için kullanıcılara **ipuçları** verir. İpuçlarını uygulayarak, kullanıcılar çıktı performansını önemli ölçüde artırabilir.
 
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled2.png)
+
 ### 3.1. Proje Ayarları:
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled1.png)
+- Uygulamada kullanıcılara sunulan kartlar STM32U5 serisi MCU'ya sahiptir. Çıktı alınacak yapay zeka modeli bu kartlara gömüleceği için **Your Target** kısmından uygun MCU serisi seçilmelidir. 
+- Her ölçüm 6 eksen olarak okunmaktadır, **Sensor Type** seçeneği Generic, **Number of Axes** ise 6 seçilmelidir.
+- Maksimum model RAM ve Flash kullanımı isteğe göre sınırlandırılabilir.
+
+
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled1.jpg)
 
 - **Target** Sensor Model - **Hedef** Sensör Modeli
     - Kullanıcı, AI modelini gömmek için hedef sensör modelini seçmelidir.
@@ -112,45 +127,45 @@ NanoEdge AI Studio, sürecin hemen her kısmı için kullanıcılara **ipuçlar�
 
 ### 3.2. Sinyaller:
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled2.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled3.png)
 
 - **From File** - **Dosya ile**
     - Her sınıf için farklı veri dosyaları seçilir.
     
-    ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled3.png)
+    ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled4.jpg)
     
     - Dosyaları seçtikten sonra veri setleri görülebilir. Eğer **veri uygun değilse**, NanoEdge AI Studio uygun olmayan kısımları vurgular ve kullanıcıdan sorunları düzeltmesini ister.
 
 - **Seri Port (USB) Üzerinden:**
     - Veriler doğrudan USB'den alınır.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled4.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled5.png)
 
 - **SD Karttan**
-    - Şu an için, SD Kart seçeneği sadece **From File** seçeneği ile yapılabilir durumda.
+    - Şu an için, SD Kart seçeneği sadece **From File** seçeneği ile yapılabilir durumdadır.
 
 **Veriyi içe aktardıktan sonra:**
 
 - Eksenler, verinin sütunlarıdır (features).
 - Veri uygunsa, NanoEdge AI Studio verilere **Fourier Dönüşümü** uygular, böylece sinyaller Frekans Domain'inde görülebilir.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled5.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled6.jpg)
 
 - Kullanıcı giriş sinyallerinden **istenmeyen frekans** bileşenlerini **kaldırmak** istiyorsa, **Filtre**yi açabilir. Sinyalleri belirli bir frekans penceresine sınırlandırmak için kesilecek frekansları seçebilir.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled6.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled7.png)
 
 ### 3.3. Benchmark (Model Eğitimi ve Performansı)
 
 Bu bölümde, **seçili sinyaller (sınıflar)** ve **benchmark için kullanılacak CPU çekirdek sayısı** seçenekleri işaretlenerek  benchmark başlatılabilir.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled7.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled8.jpg)
 
-**Bu pencerede, seçilecek her veri ayrı bir sınıf olarak kabul edilir!**
+Bu pencerede, seçilecek **her veri ayrı bir sınıf olarak kabul edilir!**
 
 Başlat düğmesine tıkladıktan birkaç saniye sonra benchmark başlayacaktır.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled8.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled9.jpg)
 
 Benchmark ekranında kullanıcı şunları görür:
 - Benchmark'ın **durumu**,
@@ -162,25 +177,25 @@ Benchmark ekranında kullanıcı şunları görür:
 
 Benchmark'tan sonra, kullanıcılar eğitilen tüm kütüphanelerden birini **seçme** seçeneğine sahiptir. Bunun amacı farklı performans öncelikleri olan kullanıcıların isteklerine uygun modelleri seçmelerini sağlamaktır.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled9.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled10.jpg)
 
 ### 3.4. Validation - Doğrulama
 
-Kullanıcılar test verilerini kullanarak modelleri **karşılaştırabilir** ve **tercih edilen modeli seçebilir**.
+Kullanıcılar test verilerini kullanarak modelleri **karşılaştırabilir** ve **tercih edilen farklı bir modeli seçebilir**.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled10.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled11.jpg)
 
 ### 3.5. Emulator
 
 Modeli **doğrudan NanoEdge AI Studio içinde emüle etmeyi** sağlar.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled11.png)
-
 ![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled12.png)
+
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled13.png)
 
 ### 3.6. Deployment - Model Kütüphanesi Elde Etme
 
 - Kullanıcılar, **eğitilmiş model kütüphanesini** ve C kodu örneklerini **Compile Library (kütüphaneyi derle)** düğmesi ile bilgisayarlarına kaydedebilirler.
 - Ekranın sağında bulunan kod örneği, modeli hedef MCU'da kullanmak için bir kılavuz görevi görür.
 
-![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled13.png)
+![Untitled](./Additionals/NEAIS-End-to-endDeploymentSteps/Untitled14.jpg)
