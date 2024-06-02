@@ -17,9 +17,7 @@
 Aktivite için oluşturulan bulut çalışma ortamı _geliştirme_ ortamı için ortam kurulumu gerektirmez (_test ortamı seri port bağlantısı için yerel çalışma ortamı gerektirir_). Aşağıdaki linke tıklayarak erişebileceğiniz Colab Notebook örneği ile aktiviteye uygulamalı katılım sağlayabilirsiniz.
 
 1- Colab Notebook Örneği
-```
-Colab Link
-```
+[Accelerators Workshop - Uçta Yapay Zeka - Aktivite-2 Geliştirme İçin Bulut Çalışma Ortamı](https://colab.research.google.com/drive/1rSpHM_JGy5NAFCWkZ7TPcCt1fxc8kywF?usp=sharing)
 
 ### Alternatif-2: Yerel Çalışma Ortamı
 
