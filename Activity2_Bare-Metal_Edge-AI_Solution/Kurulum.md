@@ -14,7 +14,7 @@
 
 ## Çalışma Ortamı Kurulumu
 ### Alternatif-1: Bulutta Çalışma Ortamı
-Aktivite için oluşturulan bulut çalışma ortamı _geliştirme_ ortamı kurulumu gerektirmez. Aşağıdaki linke tıklayarak erişebileceğiniz Colab Notebook örneği ile aktiviteye uygulamalı katılım sağlayabilirsiniz.
+Aktivite için oluşturulan bulut çalışma ortamı _geliştirme_ ortamı için ortam kurulumu gerektirmez (_test ortamı seri port bağlantısı için yerel çalışma ortamı gerektirir_). Aşağıdaki linke tıklayarak erişebileceğiniz Colab Notebook örneği ile aktiviteye uygulamalı katılım sağlayabilirsiniz.
 
 1- Colab Notebook Örneği
 ```

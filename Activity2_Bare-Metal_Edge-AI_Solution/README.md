@@ -13,10 +13,10 @@ Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarl
 Aktivite için gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## Uygulama
-### ↳ [STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma](train_hand_character_recognition.ipynb)
+### ↳ [STM32 Platformları İçin Edge-AI Çözümleri Geliştirme: El Karakteri Sınıflandırma](Uygulama_train_hand_character_recognition.ipynb)
 Aktivite içeriği olan "uçta yapay zeka" uygulamasının geliştirme adımlarını içerir.
 
-### ↳ [Model Testi: El Karakteri Sınıflandırma](test_hand_character_recognition.ipynb)
+### ↳ [Model Testi: El Karakteri Sınıflandırma](Uygulama_test_hand_character_recognition.ipynb)
 Aktivite içeriği olan "uçta yapay zeka" uygulamasının test adımlarını içerir.
 
 ## ST Platformlarında Uçta Yapay Zeka
