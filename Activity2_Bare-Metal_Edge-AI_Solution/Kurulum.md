@@ -9,9 +9,6 @@
 
 Çalışma ortamının kurulum adımlarına geçmeden önce lütfen kurulum için tavsiye edilen doküman linklerine tıklayınız ve gerekli kurulum adımlarını takip ediniz.
 
-- Git ([git-scm.com - Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
-- Workshop Repository & Python Sanal Ortamı ([Aşağıda Yönergelendirilmiştir](github.com/Empa-Teknoloji/AI_Workshop/Activity2_Bare-Metal_Edge-AI_Solution/README.md))
-
 ## Çalışma Ortamı Kurulumu
 ### Alternatif-1: Bulutta Çalışma Ortamı
 Aktivite için oluşturulan bulut çalışma ortamı _geliştirme_ ortamı için ortam kurulumu gerektirmez (_test ortamı seri port bağlantısı için yerel çalışma ortamı gerektirir_). Aşağıdaki linke tıklayarak erişebileceğiniz Colab Notebook örneği ile aktiviteye uygulamalı katılım sağlayabilirsiniz.
@@ -21,7 +18,8 @@ Aktivite için oluşturulan bulut çalışma ortamı _geliştirme_ ortamı için
 
 ### Alternatif-2: Yerel Çalışma Ortamı
 
-Etkinliğimizde kullanılacak Python sanal ortamını eksiksiz şekilde edinmek için, aşağıdaki adımları kendi lokal geliştirme makinenizde (_kod bloğu olanları terminalinizde çalıştırarak_) takip ediniz.  
+Etkinliğimizde kullanılacak Python sanal ortamını eksiksiz şekilde edinmek için, aşağıdaki adımları kendi lokal geliştirme makinenizde (_kod bloğu olanları terminalinizde çalıştırarak_) takip ediniz.
+> Windows platformu için cmd, Powershell, Windows10 Terminal gibi komut satırı araçlarının herhangi birinden faydalanabilirsiiz.
 
 1- Git Kurulumu: [Git Installation Guide - git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
@@ -29,6 +27,7 @@ Etkinliğimizde kullanılacak Python sanal ortamını eksiksiz şekilde edinmek 
 
 3- Aktivite için gerekli kaynak dosyalarının edinimi için kod deposunu kendi lokal geliştirme makinenize indiriniz:
 ```
+mkdir Workshop_Workspace && cd Workshop_Workspace
 git clone https://github.com/Empa-Teknoloji/AI_Workshop.git
 ```
 4- Aktivite çalışma ortamında kullanılacak Python sanal ortamının (_virtual environment_) kurulumu:
@@ -45,7 +44,8 @@ pip3 install virtualenv
 (Çalıştırma sonrası terminal komut satırı başlangıcında (WORKSHOP_ENV) eki görmelisiniz)
 ```
 virtualenv WORKSHOP_ENV
-
+```
+```
 // Ubuntu için
 source WORKSHOP_ENV/bin/activate
 
@@ -55,9 +55,29 @@ source WORKSHOP_ENV/bin/activate
 4.3- Kod deposu klasörü içine giderek gerekli paketlerin kurulumunu yapınız:
 
 ```
-cd AI_Workshop
+cd AI_Workshop/Activity2_Bare-Metal_Edge-AI_Solution
 pip3 install -r requirements.txt
 ```
+5- Oluşturulan Python sanal ortamını (__WORKSHOP_ENV__) VSCode içerisinde erişilebilir kılmak için sırasıyla adımları takip ediniz.  
+5.1. "Interpreter_Test.py" dosyasını editörde açtıktan sonra
+```
+CTRL+SHIFT+P (Komut paletini açar) > Python: Select Interpreter > Enter interpreter path.. > Find...  
+```
+adımlarını takip ediniz.
+
+5.2. Açılan dosya seçim penceresini kullanarak sanal ortam içindeki python.exe'yi VSCode için seçiniz.
+```
+WORKSHOP_ENV > Scripts > python.exe
+```
+5.3. Interpreter seçimi sonrası daha önce editörde açılan "Interpreter_Test.py" dosyasını sağ üstteki üçgen tuşu ile çalıştırıp test ediniz ve çalıştırılmasının sorunsuz şekilde gerçekleştiğini VSCode üzerinde açılan terminaldeki çıktıya bakarak teyit ediniz.  
+
+5.4. Python sanal ortamını uygulama scripti içerisinde "yorumlayıcı" olarak seçiniz: 
+- Scripti VSCode içinde editör üzerinden açınız. Açılan scriptin sağ üst köşesinde yer alan "Select Kernel" butonu tıklayınız. 
+- Ardından "Python Environments" adımlarını izleyerek WORKSHOP_ENV sanal ortamını interpreter olarak seçiniz.  
+<img src="./Additionals/Virtual-Environment2.png" alt="Accelerator Workshops" width="600"/>    
+<img src="./Additionals/Virtual-Environment3.png" alt="Accelerator Workshops" width="600"/>
+
+Bu seçim sonrasında VSCode editör ve Python sanal ortamı uygulama geliştirme adımları için hazırdır.
 
 ### Ek: STM32Cube-MX ve STM32CubeAI Kurulumu  
 Aktivite bünyesinde geliştirilecek çözümün (modelin) ST platformlarına implementasyonu için gerekli STM32CubeMX ve STM32CubeAI ürünlerinin kurulumu için aşağıdaki adımları takip ediniz.
