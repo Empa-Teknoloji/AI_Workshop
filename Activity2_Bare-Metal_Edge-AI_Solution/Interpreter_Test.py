@@ -1,1 +1,1 @@
-print("Bugün güzel bir gün. Çünkü Accelerator Workshop etkinliğindeyiz!")
+print("Bugün güzel bir gün çünkü Accelerator Workshop etkinliğindeyiz!")
