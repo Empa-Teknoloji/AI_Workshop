@@ -47,21 +47,20 @@ Etkinliğimizde kullanılacak Python sanal ortamını eksiksiz şekilde edinmek 
 3.1. Python3.10 için verilen indirme linkini kullanarak kurulum için gerekli dosyayı indiriniz.  
 [Python3.10 - Windows x64 Download Link](https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe)
 
-3.2. İndirilen .exe uzantılı Python kurulum dosyasına çift tıklayarak kurulum penceresini başlatınız. Açılan pencerede **"Add Python to PATH"** seçeneğini seçili hale getirdikten sonra "Install Now" başlığına tıklayarak  Python kurulumunu ilerletiniz.    
+3.2. İndirilen .exe uzantılı Python kurulum dosyasına çift tıklayarak kurulum penceresini başlatınız. Açılan pencerede **"Add Python to PATH"** seçeneğini seçili hale getirdikten sonra **"Install Now"** başlığına tıklayarak Python kurulumunu ilerletiniz.    
 <img src="./Additionals/Python-Windows-1.png" alt="Accelerator Workshops" width="600"/>
 
-3.3. Optional Features sayfasında aşağıdaki görselde seçili olan seçenekleri seçerek Next butonuna basınız.  
-<img src="./Additionals/Python-Windows-2.png" alt="Accelerator Workshops" width="600"/>  
-
-3.4. Advanced Features sayfasında aşağıdaki görselde seçili olan seçenekleri seçerek Next butonuna basınız ve kurulumu ilerleterek bitiriniz.   
-<img src="./Additionals/Python-Windows-3.png" alt="Accelerator Workshops" width="600"/>
+3.3. "Setup was succesful" ibaresi ile gelen pencere sonrasında Python için son adım olan "Disable path lenght limit" yazısına tıklayınız ve gelen uyarıyı onayladıktan sonra Close butonuna basarak kurulumu bitiriniz.
+<img src="./Additionals/Python-Windows-4.png" alt="Accelerator Workshops" width="600"/>
 
 **4- Kod Deposu (Repository) İçeriklerinin İndirilmesi**  
 Aktivite için gerekli kaynak dosyalarının edinimi için kod deposunu **aşağıda verilen komutları terminalinizde çalıştırarak** kendi yerel geliştirme makinenize indiriniz.
+> **Önemli Not**: Terminal komut satırı kullanım kolaylığı sağlamak ve kurulumların doğru bir şekilde yürütülebilmesi için C: > Users(Kullanıcılar) > "Kullanıcı-Adı" konumunda açılmalı ve verilen komutlar bu dosya yolunda çalıştırılmalıdır. Bir komut satırı aracı, arama kısmına adı yazılarak başlatıldığında bu dosya yolunda başlatılmakta ve oluşturacağınız klasörler/dosyalar bu klasör altında listelenmektedir. _Örnek ideal terminal başlangıç satırı: "C:/Users/empa"_
 ```
 mkdir Workshop_Workspace && cd Workshop_Workspace
 git clone https://github.com/Empa-Teknoloji/AI_Workshop.git
 ```  
+<img src="./Additionals/Terminal-Clone-1.png" alt="Accelerator Workshops" width="600"/>
 
 **5- Python Sanal Ortamı (Virtual Environment) Kurulumu**  
 Aktivite çalışma ortamında kullanılacak Python sanal ortamının (_virtual environment_) kurulumu için verilen adımları takip ediniz.
@@ -69,7 +68,9 @@ Aktivite çalışma ortamında kullanılacak Python sanal ortamının (_virtual 
 5.1. "virtualenv" aracının kurulumu için verilen komutu terminalinizde çalıştırınız:
 ```
 pip3 install virtualenv
-```
+```  
+<img src="./Additionals/Terminal-VirtualEnv-1.png" alt="Accelerator Workshops" width="600"/>
+
 5.2. Python sanal ortamını oluşturunuz ve terminalinizde aktive ediniz. İkinci komutun çalıştırılması sonrası terminal komut satırı başlangıcında (WORKSHOP_ENV) eki görmelisiniz.
 ```
 virtualenv WORKSHOP_ENV --python=python3.10
@@ -84,7 +85,7 @@ cd AI_Workshop
 pip3 install -r Activity2_Bare-Metal_Edge-AI_Solution/requirements.txt
 ```
   
-**6- Windows İçin STM32CubeMX**  
+**6- Windows İçin STM32CubeMX & STM32CubeAI**  
 
 Aktivite içeriğinde geliştirilecek çözümün (modelin) ST platformlarına implementasyonu için gerekli STM32CubeMX ve STM32CubeAI ürünlerinin kurulumu adımlarını takip ediniz.
 
@@ -112,6 +113,9 @@ STM32CubeMX ürünün kurulumu sonrası STM32CubeAI eklentisinin kurulması içi
 #### Ubuntu İçin Çalışma Ortamı Kurulumu
 
 Aktivite için gerekli kaynak dosyalarının edinimi için kod deposunu **aşağıda verilen komutları terminalinizde çalıştırarak** kendi yerel geliştirme makinenize indiriniz.
+> **Önemli Not**: Terminal komut satırı kullanım kolaylığı sağlamak ve kurulumların doğru bir şekilde yürütülebilmesi için /home > Kullanıcı-Adı" konumunda açılmalı ve verilen komutlar bu dosya yolunda çalıştırılmalıdır. Ubuntu terminal aracı, arama kısmına adı yazılarak başlatıldığında bu dosya yolunda başlatılmakta ve oluşturacağınız klasörler/dosyalar bu klasör altında listelenmektedir. _Örnek ideal terminal başlangıç satırı: /home/empa (Terminal satırında sadece $ işareti ile görülmektedir.)_
+
+<img src="./Additionals/Terminal-Clone-Linux-1.png" alt="Accelerator Workshops" width="600"/>
 
 **1- Git Kurulumu**  
 Git aracının edinimi için verilen komutu terminalinizde çalıştırınız.
@@ -160,7 +164,7 @@ cd AI_Workshop
 pip3 install -r Activity2_Bare-Metal_Edge-AI_Solution/requirements.txt
 ```
 
-**6- STM32CubeMX & STM32CubeAI Kurulumu**  
+**6- Ubuntu İçin STM32CubeMX & STM32CubeAI Kurulumu**  
 
 Aktivite içeriğinde geliştirilecek çözümün (modelin) ST platformlarına implementasyonu için gerekli STM32CubeMX ve STM32CubeAI ürünlerinin kurulumu adımlarını takip ediniz.
 
