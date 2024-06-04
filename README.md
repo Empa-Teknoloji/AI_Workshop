@@ -85,6 +85,9 @@ Workshop etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonra
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-4: 4 Haziran 2024  
+Aktivite-2 kurulum adımları güncellendi. Terminal komutları için ek açıklamalar eklendi.
+
 Versiyon-3: 4 Haziran 2024  
 Karşılama sayfası bilgilendirme ifadeleri güncellendi.
 
