@@ -62,7 +62,7 @@ Workshop Repository
 ## Ön Gereksinimler - Checklist
 Workshop etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonrası hazırladığımız checklist ile gereksinimlerin kontrolünü sağlayabilirsiniz.
 
-**Aktivite-1 (Deneysel Kullanım Amaçlı)**
+**Aktivite-1  (_Etkinlik Sonrası Deneysel Kullanım Amaçlıdır_)**
 - [ ] Python3.8
 - [ ] Docker
 - [ ] Vitis-AI Docker Container Ortamı
