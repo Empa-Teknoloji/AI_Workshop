@@ -11,3 +11,4 @@ pyserial
 ipykernel
 tf2onnx
 onnxruntime
+matplotlib
