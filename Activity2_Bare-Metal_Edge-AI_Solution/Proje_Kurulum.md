@@ -70,7 +70,7 @@ float aiInData[AI_NETWORK_IN_1_SIZE];
 float aiOutData[AI_NETWORK_OUT_1_SIZE];
 ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
 const char* activities[AI_NETWORK_OUT_1_SIZE] = {
-  "CIRCLE", "HORIZONTAL", "STANDBY","TRIANGLE","VERTICAL"
+  "CIRCLE", "HORIZONTAL", "STANDBY", "TRIANGLE", "VERTICAL"
 };
 ai_buffer * ai_input;
 ai_buffer * ai_output;
