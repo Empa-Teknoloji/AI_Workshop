@@ -23,6 +23,9 @@ Aktivite içeriği olan "uçta yapay zeka" uygulamasının geliştirme adımlar�
 ### ↳ [Model Testi: El Karakteri Sınıflandırma](Uygulama_test_hand_character_recognition.ipynb)
 Aktivite içeriği olan "uçta yapay zeka" uygulamasının test adımlarını içerir.
 
+### ↳ [STM32CubeAI Çıktısının MindBoard'a Implementasyonu](Proje_Kurulum.md)
+Aktivite içeriği olan "uçta yapay zeka" uygulamasının test adımlarını içerir.
+
 ## ST Platformlarında Uçta Yapay Zeka
 
 **Tensorflow İle Makine Öğrenimi Modelleri Geliştirme**  
