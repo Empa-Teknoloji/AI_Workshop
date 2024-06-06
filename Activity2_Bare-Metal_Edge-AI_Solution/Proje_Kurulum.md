@@ -4,9 +4,9 @@
   <img width="100%" height="100%" src="Additionals/CubeAI_Doc1.png">
 </div>
 <br />
-Ve ardından aşağıda gözüktüğü üzere indirmiş olduğunuz klasördeki EMPA_WORKSHOP.ioc dosyasını seçin ve ilerleyerek işlemi tamamlayın.
+Ve ardından aşağıda gözüktüğü üzere indirmiş olduğunuz klasördeki CubeMX_Project_Files altında bulunan AI_Workshop.ioc dosyasını seçin ve projeyi isimlendirip işlemi tamamlamak için Finish'e basınız.
 <div align="center">
-  <img width="100%" height="100%" src="Additionals/CubeAI_Doc2.PNG">
+  <img width="100%" height="100%" src="Additionals/CubeAI_Doc2.png">
 </div>
 <br />
 
@@ -17,7 +17,7 @@ Açılan IOC sayfasından yukarıda bulunan Software Packs->Select Component'a t
 </div>
 <br />
 
-Ok ile IOC konfigurasyon sayfasına geri döndüğümüzde Middleware and Software Packs sekmesinde X-CUBE-AI seçeneğinin açıldığını göreceğiz. Bu seçeneğe tıkladığımızda Mode sekmesinde bulunan Artificial Intelligence seçeniğinin tikli olması gerekmektedir. Ardında
+"Ok" butonu ile IOC konfigurasyon sayfasına geri döndüğümüzde Middleware and Software Packs sekmesinde X-CUBE-AI seçeneğinin açıldığını göreceğiz. Bu seçeneğe tıkladığımızda Mode sekmesinde bulunan Artificial Intelligence seçeniğinin tikli olması gerekmektedir. Ardında
 Aşağıda Configuration sekmesinde Main ve + simgesinin olduğunu göreceksiniz.
  
 Burada + simgesine basıp yeni bir network oluşturabilirsiniz. Cube AI kullanılırken seçebileceğimiz 3 farklı model tipi vardır. TFLite, Keras ve ONNX. Prebuilt olarak repoda paylastığımız model bir TFLite modelidir, bu yüzden model olarak TFLite'yi seçip Browse ile kendi ürettiğiniz veya repoda hazır gelen modeli buraya ekleyiniz. Aşağıdaki Ayarlarla kontrol edebilirsiniz.
@@ -27,7 +27,7 @@ Burada + simgesine basıp yeni bir network oluşturabilirsiniz. Cube AI kullanı
 </div>
 <br />
 
-IOC dosyasını savelemeden önce modelin Analizi yapılması gerekmektedir. Bunun için X-CUBE-AU Configuration sekmesinde bulunan Analyze düğmesine basınız. Aşağıdaki gibi bir analiz sonucu elde etmeniz gerekmektedir.
+IOC dosyasını savelemeden önce modelin Analizi yapılması gerekmektedir. Bunun için X-CUBE-AI Configuration sekmesinde bulunan Analyze düğmesine basınız. Aşağıdaki gibi bir analiz sonucu elde etmeniz gerekmektedir.
 
 <div align="center">
   <img width="100%" height="100%" src="Additionals/CubeAI_Doc5.PNG">
@@ -70,7 +70,7 @@ float aiInData[AI_NETWORK_IN_1_SIZE];
 float aiOutData[AI_NETWORK_OUT_1_SIZE];
 ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
 const char* activities[AI_NETWORK_OUT_1_SIZE] = {
-  "stationary", "walking", "running"
+  "CIRCLE", "HORIZONTAL", "STANDBY", "TRIANGLE", "VERTICAL"
 };
 ai_buffer * ai_input;
 ai_buffer * ai_output;
