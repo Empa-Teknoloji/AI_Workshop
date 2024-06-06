@@ -85,6 +85,9 @@ Workshop etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonra
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-6: 6 Haziran 2024  
+Aktivite-2 Proje adımları Güncellendi. CubeMx Proje için IOC dosyası eklendi.
+
 Versiyon-5: 6 Haziran 2024  
 Aktivite-2 Proje adımları eklendi. CubeMx Proje dosyaları eklendi.
 
