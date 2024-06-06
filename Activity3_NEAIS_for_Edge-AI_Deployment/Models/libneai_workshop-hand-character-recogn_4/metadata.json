@@ -1,20 +1,20 @@
 {
     "algorithm_type": "classifier",
     "class_names": [
-        "vertical",
-        "triangle",
-        "horizontal",
         "circle",
-        "standby"
+        "horizontal",
+        "standby",
+        "triangle",
+        "vertical"
     ],
     "commit": "0f64539d",
-    "compilation_date": "2024-05-31T12:29:12.241448",
+    "compilation_date": "2024-06-06T07:46:34.353727",
     "compilation_flags": {
         "float_abi": "hard",
         "fshort_enums": false,
         "short_wchar": false
     },
-    "compilation_str": "{'compilation_dict':{'request_type':'library','api':{'env':'PROD','version':'v3'},'version':{'web_api':{'env':'PROD','version':'v3'},'local_api':{'version':'2024.03.18.0','platform':'unix'},'studio':'4.4.0'},'compilation_flags':{'float_abi':'hard','short_wchar':false,'fshort_enums':false,'use_knowledge':false},'mcu':'cortex-m33_stmicroelectronics_stm32u5-series','sensor':'multiGeneric','request_origin':'manual','algorithm_type':'classifier','lib_version':'v2_0f64539','info':{'progression':{'evals_done':15335,'optimization_progress':0.09584375,'elapsed_time':199,'cpu_info':{'cpu_nb_cores':16,'cpu_nb_cores_for_optimization':12},'state':'ongoing'},'max_ram':32000,'max_flash':null,'optimization_global_id':'648db0462c262cbd8ae0d1db1860a8df'},'class_names':'vertical,triangle,horizontal,circle,standby','results':[{'result_id':108,'combination':[1e-05,1,0,[13,10,12,5,11,14,16,0,4,3,6,8,7,17,20,22,26,24,23,15,19,21,18,1,25,2,9],27,0,79,128,2,1,1,6,5,0,0.0,0.0,1000000.0,0,1,0,0,0.0001,1],'performance':{'performance':{'score':0.952,'precision':0.9706,'precision_confidence_interval':[0.9413,0.9908]},'memory_usage':{'estimated_ram':2546,'estimated_flash':12108,'estimated_flash_knowledge':null}},'learning_min_lines':null}],'data':{'nb_cols':768,'nb_lines':[[{'file_type':'class','nb_lines':201},{'file_type':'class','nb_lines':198},{'file_type':'class','nb_lines':203},{'file_type':'class','nb_lines':200},{'file_type':'class','nb_lines':229}]]},'only_emulators':false,'lock_type':100},'sign':52994,'license_key':'***'}",
+    "compilation_str": "{'compilation_dict':{'request_type':'library','api':{'env':'PROD','version':'v3'},'version':{'web_api':{'env':'PROD','version':'v3'},'local_api':{'version':'2024.03.18.0','platform':'unix'},'studio':'4.4.0'},'compilation_flags':{'float_abi':'hard','short_wchar':false,'fshort_enums':false,'use_knowledge':false},'mcu':'cortex-m33_stmicroelectronics_stm32u5-series','sensor':'multiGeneric','request_origin':'manual','algorithm_type':'classifier','lib_version':'v2_0f64539','info':{'progression':{'evals_done':104308,'optimization_progress':0.651925,'elapsed_time':1311,'cpu_info':{'cpu_nb_cores':16,'cpu_nb_cores_for_optimization':12},'state':'ongoing'},'max_ram':32000,'max_flash':null,'optimization_global_id':'ef549bf6237a3993cc837680dfffbbfb'},'class_names':'circle,horizontal,standby,triangle,vertical','results':[{'result_id':72,'combination':[0.001,0,0,[11,9,13,10,15,14,12,6,1,3,8,18,7,16,22,21,26,23,24,5,17,20,4,0,25,2,19],27,0,82,128,2,1,0,6,5,0,0.0,0.0,1000000.0,2,0,0,0,0.0001,1],'performance':{'performance':{'score':0.9477,'precision':0.9646,'precision_confidence_interval':[0.9489,0.9774]},'memory_usage':{'estimated_ram':5666,'estimated_flash':18732,'estimated_flash_knowledge':null}},'learning_min_lines':null}],'data':{'nb_cols':768,'nb_lines':[[{'file_type':'class','nb_lines':822},{'file_type':'class','nb_lines':716},{'file_type':'class','nb_lines':229},{'file_type':'class','nb_lines':823},{'file_type':'class','nb_lines':708}]]},'only_emulators':false,'lock_type':100},'sign':53011,'license_key':'***'}",
     "compile_emulators": true,
     "compile_library": true,
     "data": {
@@ -23,23 +23,23 @@
             [
                 {
                     "file_type": "class",
-                    "nb_lines": 201
+                    "nb_lines": 822
                 },
                 {
                     "file_type": "class",
-                    "nb_lines": 198
-                },
-                {
-                    "file_type": "class",
-                    "nb_lines": 203
-                },
-                {
-                    "file_type": "class",
-                    "nb_lines": 200
+                    "nb_lines": 716
                 },
                 {
                     "file_type": "class",
                     "nb_lines": 229
+                },
+                {
+                    "file_type": "class",
+                    "nb_lines": 823
+                },
+                {
+                    "file_type": "class",
+                    "nb_lines": 708
                 }
             ]
         ]
@@ -47,45 +47,45 @@
     "gcc_version": "arm-none-eabi-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009",
     "learning_min_lines": null,
     "lib_limited": false,
-    "library_id": "6659c299c9f2873cd532fafb",
-    "library_md5sum": "dda95818ad25b5a2f71a25a646a65c4f",
+    "library_id": "6661695bfc51daa12264f7de",
+    "library_md5sum": "7f7519d49f1c721cac9c1a2fedb0f7a4",
     "mcu": "cortex-m33_stmicroelectronics_stm32u5-series",
     "mcu_cpn": null,
     "mcu_family": "STM32U5 Series",
     "mcu_type": "cortex-m33",
     "mcu_vendor": "STMicroelectronics",
     "memory_usage": {
-        "flash": 2501,
-        "ram": 2521
+        "flash": 2505,
+        "ram": 5649
     },
     "optimization_info": {
         "max_flash": null,
         "max_ram": 32000,
-        "optimization_global_id": "648db0462c262cbd8ae0d1db1860a8df",
+        "optimization_global_id": "ef549bf6237a3993cc837680dfffbbfb",
         "progression": {
             "cpu_info": {
                 "cpu_nb_cores": 16,
                 "cpu_nb_cores_for_optimization": 12
             },
-            "elapsed_time": 199,
-            "evals_done": 15335,
-            "optimization_progress": 0.09584375,
+            "elapsed_time": 1311,
+            "evals_done": 104308,
+            "optimization_progress": 0.651925,
             "state": "ongoing"
         }
     },
     "performance": {
         "memory_usage": {
-            "estimated_flash": 12108,
+            "estimated_flash": 18732,
             "estimated_flash_knowledge": null,
-            "estimated_ram": 2546
+            "estimated_ram": 5666
         },
         "performance": {
-            "precision": 0.9706,
+            "precision": 0.9646,
             "precision_confidence_interval": [
-                0.9413,
-                0.9908
+                0.9489,
+                0.9774
             ],
-            "score": 0.952
+            "score": 0.9477
         }
     },
     "request_type": "library",
@@ -102,9 +102,9 @@
         }
     },
     "user_info": {
-        "company": "Empa Technology",
-        "email": "deniz.celik@empa.com",
-        "first_name": "Deniz",
-        "last_name": "\u00c7elik"
+        "company": "Y\u0131ld\u0131z Technical University",
+        "email": "mertyilmaz1903@hotmail.com",
+        "first_name": "Mert",
+        "last_name": "Y\u0131lmaz"
     }
 }
