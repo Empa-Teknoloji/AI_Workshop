@@ -85,6 +85,9 @@ Workshop etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonra
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-5: 6 Haziran 2024  
+Aktivite-2 Proje adımları eklendi. CubeMx Proje dosyaları eklendi.
+
 Versiyon-4: 4 Haziran 2024  
 Aktivite-2 kurulum adımları güncellendi. Terminal komutları için ek açıklamalar eklendi.
 
