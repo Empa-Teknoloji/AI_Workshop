@@ -85,6 +85,9 @@ Workshop etkiliğinde kullanılacak çalışma ortamlarının kurulumları sonra
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-9: 10 Haziran 2024  
+Board şemaları eklendi.
+
 Versiyon-8: 7 Haziran 2024  
 Aktivite-2 Proje adımları Güncellendi. NanoEdge Çıktılarını otomatize eden scirpt eklendi.
 
